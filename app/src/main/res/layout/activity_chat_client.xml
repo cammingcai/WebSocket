@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.wlf.websocket.ChatClientActivity">
+
+    <ScrollView
+        android:id="@+id/svChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spDraft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ws://192.168.1.104:80/JSR356-WebSocket/websocket/ -->
+            <!-- ws://192.168.1.104:8887 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:text="ws://192.168.1.104:80/JSR356-WebSocket/websocket/"/>
+
+                <Spinner
+                    android:id="@+id/spAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="连接"/>
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="断开"/>
+
+            <EditText
+                android:id="@+id/etDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="13dp"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="取个名字"
+            android:text="Jack"/>
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="发送"/>
+    </LinearLayout>
+</LinearLayout>
